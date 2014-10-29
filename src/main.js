@@ -47,8 +47,8 @@ var MainLayer = cc.LayerColor.extend({
 	showWaite:function()
 	{
 		cc.log("showWaite");
-		this.removeAllChildren();
-		this.unscheduleAllCallbacks();
+		this.removeAllChildren();//清除所有控件
+		this.unscheduleAllCallbacks();//清除定时器
 		this.sprite = cc.Sprite.create(s_WaiteForGreen);
 		this.sprite.setPosition(this.size.width/2,this.size.height/2);
 		this.addChild(this.sprite,1);
@@ -61,10 +61,10 @@ var MainLayer = cc.LayerColor.extend({
 		this.flag = 1;
 		//输出1-10的随机数
 		randomTime = Math.floor(Math.random()*10+1);
-		this.schedule(this.showGreen,randomTime,1,0);
+		this.schedule(this.showGreen,randomTime,1,0); //添加定时器
 		cc.log("randomTime",randomTime);
 	},
-
+	//显示点击的页面
 	showGreen:function()
 	{
 		cc.log("showGreen");
@@ -72,7 +72,7 @@ var MainLayer = cc.LayerColor.extend({
 		this.sprite.setPosition(this.size.width/2,this.size.height/2);
 		this.addChild(this.sprite,1);
 		this.flag = 2;
-		this.date1 = new Date();
+		this.date1 = new Date();//颜色变化后，记录一个时间
 	},
 
 	showToSoon:function()
