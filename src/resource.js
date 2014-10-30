@@ -7,6 +7,8 @@ var s_Click = "res/click.png";
 var s_TooSoon = "res/tooSoon.png";
 var s_Result = "res/result.png";
 var s_WaiteForGreenAnim = "res/waiteForGreenAnim.png";
+var s_ClickToStartAnim = "res/clickToStartAnim.png";
+var s_ResultAnim = "res/resultAnim.png";
 
 var g_resources = [
     //image
@@ -18,7 +20,9 @@ var g_resources = [
     s_Click,
     s_TooSoon,
     s_Result,
-    s_WaiteForGreenAnim
+    s_WaiteForGreenAnim,
+    s_ClickToStartAnim,
+    s_ResultAnim
     //plist
 
     //fnt
