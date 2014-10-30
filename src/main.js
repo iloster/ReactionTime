@@ -115,6 +115,7 @@ var MainLayer = cc.LayerColor.extend({
 		var rep = cc.RepeatForever.create(action);
 		this.resultAnim.runAction(rep);
 
+		document.title = window.wxData.desc = "我的反应速度是"+time+"ms!来试试你的吧！";
 		this.flag = 4;
 	}
 });

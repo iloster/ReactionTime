@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>测试反应速度-----coding by loster</title>
+    <title>测测你的反应速度-----coding by loster</title>
     <link rel="icon" type="image/GIF" href="res/favicon.ico"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="full-screen" content="yes"/>
@@ -22,5 +22,49 @@
 <body style="padding:0; margin: 0;">
 <canvas id="gameCanvas" width="800" height="450"></canvas>
 <script src="cocos2d.js"></script>
+<script src="WeixinApi.js"></script>
+<script type="text/javascript">
+        // 微信分享的数据
+window.wxData = {
+    "appId": "", 
+    "imgUrl":"",
+    "link":'http://iloveyoulhx.sinaapp.com/ReactionTime/',
+    "desc":"测测你的反应速度,快来试试吧",
+    "title":"测试反应速度"
+};
+
+function share(result){
+
+};
+
+WeixinApi.ready(function(Api) {
+
+    // 分享的回调
+    var wxCallbacks = {
+        ready : function() {
+
+        },
+
+        cancel : function(resp) {
+
+        },
+        fail : function(resp) {
+
+        },
+        confirm : function(resp) {
+
+        },
+        all : function(resp) {
+
+        }
+    };
+
+    Api.shareToFriend(wxData, wxCallbacks);
+
+    Api.shareToTimeline(wxData, wxCallbacks);
+
+    Api.shareToWeibo(wxData, wxCallbacks);
+});
+</script>
 </body>
 </html>
